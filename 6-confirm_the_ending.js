@@ -27,5 +27,10 @@ const confirmEnding2 = (str, target) => {
   return true
 }
 
+// O(1)
+// third solution
+const confirmEnding3 = (str, target) => str.slice(-target.length) === target;
+
 console.log(confirmEnding("Bastian", "ian"), confirmEnding("Bastian", "bas"));
 console.log(confirmEnding2("Bastian", "ian"), confirmEnding2("Bastian", "bas"));
+console.log(confirmEnding3("Bastian", "ian"), confirmEnding3("Bastian", "bas"));
