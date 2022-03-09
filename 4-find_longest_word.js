@@ -1,5 +1,8 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string
 
+// Return the length of the longest word in the provided sentence.
+// Your response should be a number.
+
 // O(n)
 function findLongestWordLength(str) {
   let longest = 0;
@@ -20,4 +23,4 @@ function findLongestWordLength(str) {
   return longest;
 }
 
-findLongestWordLength("What if we try a super-long word such as otorhinolaryngology");
+console.log(findLongestWordLength("What if we try a super-long word such as otorhinolaryngology"));
