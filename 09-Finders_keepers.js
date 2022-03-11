@@ -18,4 +18,13 @@ function findElement(arr, func) {
   return undefined;
 }
 
+// O(n)
+const findElement2 = (arr, func) => {
+  let [first, ...rest] = arr.filter(func);
+  return first;
+};
+
 console.log(findElement([1, 2, 3, 4], (num) => num % 2 === 0));
+console.log(findElement2([1, 2, 3, 4], (num) => num % 2 === 2));
+console.log(findElement2([1, 2, 3, 4], (num) => num % 2 === 0));
+console.log(findElement2([1, 2, 3, 4], (num) => num % 2 === 2));

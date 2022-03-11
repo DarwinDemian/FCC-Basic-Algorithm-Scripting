@@ -14,9 +14,7 @@ function confirmEnding(str, target) {
   let strr = newStr.splice(str.length - target.length, target.length);
 
   for (let i in strr) {
-    if (strr[i] !== target[i]) {
-      return false;
-    }
+    if (strr[i] !== target[i]) return false;
   }
 
   return true;

@@ -10,9 +10,8 @@
 
 // O(n)
 function factorialize(num) {
-  if (num <= 1) {
-    return 1;
-  }
+  if (num <= 1) return 1;
+
   return factorialize(num - 1) * num;
 }
 

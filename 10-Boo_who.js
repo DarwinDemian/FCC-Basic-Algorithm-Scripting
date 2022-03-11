@@ -6,8 +6,6 @@
 */
 
 // O(1)
-function booWho(bool) {
-  return typeof bool === "boolean" ? true : false;
-}
+const booWho = (bool) => (typeof bool === "boolean" ? true : false);
 
 console.log(booWho(null));
