@@ -4,7 +4,7 @@
 // Return an empty string if num is not a positive number. 
 // For the purpose of this challenge, do not use the built-in .repeat() method.
 
-// O(n*m)
+// O(n)
 function repeatStringNumTimes(str, num) {
   if (str.length <= 0 || num <= 0) return ""
   
@@ -15,7 +15,7 @@ function repeatStringNumTimes(str, num) {
     num--
   }
 
-  return arr.reduce((a,b)=>a+b);
+  return arr.join('')
 }
 
 // O(n)
