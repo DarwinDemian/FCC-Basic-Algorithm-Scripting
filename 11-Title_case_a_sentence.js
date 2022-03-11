@@ -11,8 +11,8 @@
 function titleCase(str) {
   let newStr = "";
 
-  for (let i = 0; i < str.length; i++) {
-    i === 0 || str[i - 1] === " "
+  for (let i in str) {
+    i == 0 || str[i - 1] == " "
       ? (newStr += str[i].toUpperCase())
       : (newStr += str[i].toLowerCase());
   }

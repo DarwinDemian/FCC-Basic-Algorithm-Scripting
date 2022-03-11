@@ -10,10 +10,7 @@
 // O(n)
 function largestOfFour(arr) {
   let newArr = [];
-
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(Math.max(...arr[i]));
-  }
+  arr.forEach((num) => newArr.push(Math.max(arr[num])));
 
   return newArr;
 }

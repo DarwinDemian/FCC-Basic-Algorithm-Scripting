@@ -8,14 +8,11 @@
 
 // O(1)
 function truncateString(str, num) {
-  if (num >= str.length) {
-    return str;
-  }
+  if (num >= str.length) return str;
 
   let string = [...str];
-  let newString = string.splice(0, num).join("") + "...";
 
-  return newString;
+  return string.splice(0, num).join("") + "...";
 }
 
 console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
