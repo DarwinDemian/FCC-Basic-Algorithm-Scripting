@@ -32,10 +32,20 @@ const confirmEnding2 = (str, target) => {
   return true;
 };
 
-// O(1)
+// O(n)
 // third solution
-const confirmEnding3 = (str, target) => str.slice(-target.length) === target;
+const confirmEnding3 = (str, target) => {
+  let strBuffer = [...str]
+  let newStr = strBuffer.splice(-target.length).reduce((a, b) => a + b)
+
+  return newStr === target 
+}
+
+// O(1)
+// fourth solution
+const confirmEnding4 = (str, target) => str.slice(-target.length) === target;
 
 console.log(confirmEnding("Bastian", "ian"), confirmEnding("Bastian", "bas"));
 console.log(confirmEnding2("Bastian", "ian"), confirmEnding2("Bastian", "bas"));
 console.log(confirmEnding3("Bastian", "ian"), confirmEnding3("Bastian", "bas"));
+console.log(confirmEnding4("Bastian", "ian"), confirmEnding3("Bastian", "bas"));
