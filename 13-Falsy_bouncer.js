@@ -12,11 +12,27 @@ const bouncer = (arr) => {
     0: false,
     NaN: false,
     undefined: false,
-    false: false
-  }
+    false: false,
+  };
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] in lookup) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+
+  return arr;
+};
+
+console.log(
+  bouncer([7, "ate", "", false, 9]),
+  bouncer([false, null, 0, NaN, undefined, ""])
+);
+
+const bouncer2 = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (!arr[i]) {
       arr.splice(i, 1)
       i--
     }
@@ -26,7 +42,6 @@ const bouncer = (arr) => {
 }
 
 console.log(
-  bouncer([7, "ate", "", false, 9]),
-  bouncer([false, null, 0, NaN, undefined, ""])
-)
-
+  bouncer2([7, "ate", "", false, 9]),
+  bouncer2([false, null, 0, NaN, undefined, ""])
+);
