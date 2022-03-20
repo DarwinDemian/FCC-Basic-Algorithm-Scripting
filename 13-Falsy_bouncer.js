@@ -25,24 +25,30 @@ const bouncer = (arr) => {
   return arr;
 };
 
-console.log(
-  bouncer([7, "ate", "", false, 9]),
-  bouncer([false, null, 0, NaN, undefined, ""])
-);
-
 // O(n)
 const bouncer2 = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     if (!arr[i]) {
-      arr.splice(i, 1)
-      i--
+      arr.splice(i, 1);
+      i--;
     }
   }
 
-  return arr
-}
+  return arr;
+};
 
+// O(n)
+const bouncer3 = (arr) => arr.filter(Boolean);
+
+console.log(
+  bouncer([7, "ate", "", false, 9]),
+  bouncer([false, null, 0, NaN, undefined, ""])
+);
 console.log(
   bouncer2([7, "ate", "", false, 9]),
   bouncer2([false, null, 0, NaN, undefined, ""])
-  );
+);
+console.log(
+  bouncer3([7, "ate", "", false, 9]),
+  bouncer3([false, null, 0, NaN, undefined, ""])
+);
