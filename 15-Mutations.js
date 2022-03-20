@@ -38,7 +38,7 @@ const mutation = (arr) => {
 console.log("------------------------------");
 console.log("        First Solution        ");
 console.log("------------------------------");
-console.log(mutation(["hello, hello,"]));
+console.log(mutation(["hello, hello"]));
 console.log(mutation(["hello, hey"]));
 console.log(mutation(["hello, el"]));
 console.log(mutation(["hello, b"]));
