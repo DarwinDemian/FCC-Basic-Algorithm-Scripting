@@ -30,6 +30,7 @@ console.log(
   bouncer([false, null, 0, NaN, undefined, ""])
 );
 
+// O(n)
 const bouncer2 = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     if (!arr[i]) {
@@ -44,4 +45,4 @@ const bouncer2 = (arr) => {
 console.log(
   bouncer2([7, "ate", "", false, 9]),
   bouncer2([false, null, 0, NaN, undefined, ""])
-);
+  );
