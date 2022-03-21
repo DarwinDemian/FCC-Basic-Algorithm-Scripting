@@ -26,6 +26,7 @@ const mutation = (arr) => {
     valid[newArr[0][i]] = newArr[0][i];
   }
 
+  console.log(valid)
   for (let i = 0; i < newArr[1].length; i++) {
     if (newArr[1][i] in valid === false) {
       return false;
@@ -38,10 +39,10 @@ const mutation = (arr) => {
 console.log("------------------------------");
 console.log("        First Solution        ");
 console.log("------------------------------");
-console.log(mutation(["hello, hello"]));
-console.log(mutation(["hello, hey"]));
-console.log(mutation(["hello, el"]));
-console.log(mutation(["hello, b"]));
+console.log(mutation(["hello hello"]));
+console.log(mutation(["hello hey"]));
+console.log(mutation(["hello el"]));
+console.log(mutation(["hello b"]));
 
 // O(n)
 function mutation2(arr) {

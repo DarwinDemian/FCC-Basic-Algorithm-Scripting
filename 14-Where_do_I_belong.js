@@ -28,3 +28,33 @@ console.log(
   getIndexToIns([2, 5, 10], 15),
   getIndexToIns([10, 20, 30, 40, 50], 35)
 );
+
+// O(n)
+const getIndexToIns2 = (arr, num) => {
+  arr.sort((a, b) => a - b);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= num) {
+      return i;
+    }
+  }
+
+  return arr.length;
+};
+
+console.log(
+  getIndexToIns2([2, 5, 10], 15),
+  getIndexToIns2([10, 20, 30, 40, 50], 35)
+);
+
+// O(n)
+const getIndexToIns3 = (arr, num) => {
+  arr.push(num);
+
+  return arr.sort((a, b) => a - b).indexOf(num);
+};
+
+console.log(
+  getIndexToIns3([2, 5, 10], 15),
+  getIndexToIns3([10, 20, 30, 40, 50], 35)
+);
